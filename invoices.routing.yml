@@ -1,0 +1,39 @@
+entity.invoices_invoice.collection:
+  path: '/invoices_invoice/list'
+  defaults:
+    _entity_list: 'invoices_invoice'
+    _title: 'Invoices'
+  requirements:
+    _permission: 'access content'
+
+invoices.invoice_add:
+  path: '/invoices_invoice/add'
+  defaults:
+    _entity_form: invoices_invoice.add
+    _title: 'Add Invoice'
+  requirements:
+    _permission: 'administer content'
+
+entity.invoices_invoice.canonical:
+  path: '/invoices_invoice/{invoices_invoice}'
+  defaults:
+    _entity_view: 'invoices_invoice'
+    _title: 'Invoice Content'
+  requirements:
+    _permission: 'access content'
+
+entity.invoices_invoice.edit_form:
+  path: '/invoices_invoice/{invoices_invoice}/edit'
+  defaults:
+    _entity_form: invoices_invoice.edit
+    _title: 'Edit Invoice'
+  requirements:
+    _permission: 'administer content'
+
+entity.invoices_invoice.delete_form:
+  path: '/invoices_invoice/{invoices_invoice}/delete'
+  defaults:
+    _entity_form: invoices_invoice.delete
+    _title: 'Delete Invoice'
+  requirements:
+    _permission: 'administer content'
